@@ -1,0 +1,15 @@
+service: "rag_service:RAGService"
+labels:
+  owner: ayush-nigam
+  project: rag-service
+  environment: production
+include:
+- "rag_service.py"
+- ".env"
+- "requirements.txt"
+python:
+  requirements_txt: "requirements.txt"
+  lock_packages: false
+docker:
+  distro: debian
+  python_version: "3.11"
