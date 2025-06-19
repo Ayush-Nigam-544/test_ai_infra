@@ -1,15 +1,12 @@
-service: "rag_service:RAGService"
+# bentofile.yaml
+service: "qwen_service:VLLM"
 labels:
   owner: ayush-nigam
-  project: rag-service
+  project: qwen2.5-3b
   environment: production
-include:
-- "rag_service.py"
-- ".env"
-- "requirements.txt"
-python:
-  requirements_txt: "requirements.txt"
-  lock_packages: false
+  model: qwen2.5-3b
 docker:
   distro: debian
   python_version: "3.11"
+
+# Note: Do NOT specify resources here. Resources are set in the @bentoml.service decorator in qwen_service.py
