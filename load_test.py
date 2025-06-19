@@ -2,7 +2,7 @@ import asyncio
 import httpx
 import time
 
-ENDPOINT = "https://qwen253b-ebc82948.mt-guc1.bentoml.ai/generate"
+ENDPOINT = "https://qwen253bn-ebc82948.mt-guc1.bentoml.ai/generate "
 
 async def send_request(i, results):
     async with httpx.AsyncClient(timeout=60) as client:

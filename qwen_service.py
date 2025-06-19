@@ -49,8 +49,8 @@ openai_api_app = fastapi.FastAPI()
     traffic={'timeout': 300},
     resources={'gpu': bento_args.tensor_parallel_size, 'gpu_type': 'nvidia-a100'},
     scaling={
-        "min_replicas": 1,
-        "max_replicas": 2,
+        "min_replicas": 2,
+        "max_replicas": 3,
         "policy": {
             "scale_up_stabilization_window": 180,
             "scale_down_stabilization_window": 600,
